@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" class="devsite"><head>
+<script>
+var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+</script>
+<meta charset="utf-8"><meta name="xsrf_token" content="pG28XY3JPNjqPgiGtAMN9UKnVXdR4vPj8E5RFJ1TXHg6MTQ2MTExNjY3Nzg3MDY0MA" /><link rel="canonical" href="https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple"><link rel="alternate"
+    
+        href="https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple?hl=de"
+    
+        hreflang="de"><link rel="alternate"
+    
+        href="https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple?hl=ru"
+    
+        hreflang="ru"><link rel="alternate"
+    
+        href="https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple?hl=ja"
+    
+        hreflang="ja"><link rel="alternate"
+    
+        href="https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple?hl=fr"
+    
+        hreflang="fr"><link rel="alternate"
+    
+        href="https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple?hl=ko"
+    
+        hreflang="ko"><link rel="alternate"
+    
+        href="https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple?hl=zh-cn"
+    
+        hreflang="zh-cn"><link rel="alternate"
+    
+        href="https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple?hl=es"
+    
+        hreflang="es"><link rel="alternate"
+    
+        href="https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple?hl=id"
+    
+        hreflang="id"><link rel="alternate"
+    
+        href="https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple?hl=zh-tw"
+    
+        hreflang="zh-tw"><link rel="alternate"
+    
+        href="https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple?hl=pt-br"
+    
+        hreflang="pt-br"><link rel="alternate"
+    
+        href="https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple"
+    
+        hreflang="en"><link rel="shortcut icon" href="https://developers.google.com/_static/d0dac75bcc/images/favicon.png"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="publisher" href="https://plus.google.com/+GoogleDevelopers/"><link rel="stylesheet"
+      href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"><link rel="stylesheet"
+        href="https://developers.google.com/_static/d0dac75bcc/css/devsite-google-blue.css"><link rel="apple-touch-icon" href="https://developers.google.com/_static/d0dac75bcc/images/touch-icon.png"><link rel="search"
+      type="application/opensearchdescription+xml"
+      title="Google Developers"
+      href="https://developers.google.com/s/opensearch.xml"><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><meta property="og:site_name" content="Google Developers"><meta property="og:type" content="website"><meta property="og:url" content="https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple"><meta property="og:locale" content="en"><script>
+    var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script>
+
+</script><div id="gc-wrapper"itemscope itemtype="http://schema.org/Article"><input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {}, &quot;gaid&quot;: &quot;UA-42966870-1&quot;}"><input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Google Maps JavaScript API&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed In&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-24532603-1&quot;}"><input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Google Maps JavaScript API&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed In&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-49880327-1&quot;}">
+
+      
+        <div class="devsite-article-mask"></div>
+        <div class="devsite-site-mask"></div>
+        
+
+    
+
+    
+  <nav class="devsite-page-nav devsite-nav"></nav>
+
+
+      <article class="devsite-article">
+        <div class="devsite-article-inner">
+  
+          
+  
+
+
+<div class="devsite-rating-container "><div class="devsite-rating-stars"><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons"
+         data-rating-val="1" data-category="Site-Wide Custom Events" data-label="Star Rating 1"></div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons"
+         data-rating-val="2" data-category="Site-Wide Custom Events" data-label="Star Rating 2"></div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons"
+         data-rating-val="3" data-category="Site-Wide Custom Events" data-label="Star Rating 3"></div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons"
+         data-rating-val="4" data-category="Site-Wide Custom Events" data-label="Star Rating 4"></div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons"
+         data-rating-val="5" data-category="Site-Wide Custom Events" data-label="Star Rating 5"></div></div><div class="devsite-rating-description"></div><div class="devsite-rating-internal"><span class="devsite-rating-stats"></span></div></div><script>
+$(document).ready(function() {
+  devsite.ratings.init(
+    document.querySelectorAll('#devsite-feedback-project'),
+        false
+        
+  );
+});
+</script>
+
+    <nav class="devsite-page-nav-embedded devsite-nav"></nav>
+  
+  <div class="devsite-article-body clearfix" itemprop="articleBody">
+    
+    <iframe height="400px" width="100%" frameBorder="0" scrolling="no"
+        src="https://developers.google.com/maps/documentation/javascript/examples/full/geocoding-simple">
+    </iframe>
+
+    <p>Read the
+      <a href="https://developers.google.com/maps/documentation/javascript/geocoding">documentation</a> or
+      view this example <a href="https://developers.google.com/maps/documentation/javascript/examples/full/geocoding-simple">full
+      screen</a>.</p>
+
+    <div class="devsite-jsfiddle-code-sample devsite-jsfiddle-hide" data-scope="geocoding-simple">
+      <pre data-type="js">function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 8,
+    center: {lat: -34.397, lng: 150.644}
+  });
+  var geocoder = new google.maps.Geocoder();
+
+  document.getElementById('submit').addEventListener('click', function() {
+    geocodeAddress(geocoder, map);
+  });
+}
+
+function geocodeAddress(geocoder, resultsMap) {
+  var address = document.getElementById('address').value;
+  geocoder.geocode({'address': address}, function(results, status) {
+    if (status === google.maps.GeocoderStatus.OK) {
+      resultsMap.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+        map: resultsMap,
+        position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}</pre>
+      <pre data-type="html">&lt;div id=&quot;floating-panel&quot;&gt;
+  &lt;input id=&quot;address&quot; type=&quot;textbox&quot; value=&quot;Sydney, NSW&quot;&gt;
+  &lt;input id=&quot;submit&quot; type=&quot;button&quot; value=&quot;Geocode&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;map&quot;&gt;&lt;/div&gt;</pre>
+      <pre data-type="css">html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#map {
+  height: 100%;
+}</pre>
+      <pre data-type="css">#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}</pre>
+      <pre data-type="html">
+&lt;!-- Replace the value of the key parameter with your own API key. --&gt;
+&lt;script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&amp;callback=initMap"&gt;
+&lt;/script&gt;</pre>
+    </div>
+
+    <section class="kd-tabbed-horz" id="horzTab">
+      <article class="selected">
+        <header>JavaScript</header>
+        <pre class="prettyprint devsite-enable-open-in-jsfiddle" data-scope="geocoding-simple" data-jsfiddle-title="Geocoding service">function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 8,
+    center: {lat: -34.397, lng: 150.644}
+  });
+  var geocoder = new google.maps.Geocoder();
+
+  document.getElementById('submit').addEventListener('click', function() {
+    geocodeAddress(geocoder, map);
+  });
+}
+
+function geocodeAddress(geocoder, resultsMap) {
+  var address = document.getElementById('address').value;
+  geocoder.geocode({'address': address}, function(results, status) {
+    if (status === google.maps.GeocoderStatus.OK) {
+      resultsMap.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+        map: resultsMap,
+        position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}</pre>
+      </article>
+      <article>
+        <header>JavaScript + HTML</header>
+        <pre class="prettyprint devsite-enable-open-in-jsfiddle" data-scope="geocoding-simple" data-jsfiddle-title="Geocoding service">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Geocoding service&lt;/title&gt;
+    &lt;meta name="viewport" content="initial-scale=1.0, user-scalable=no"&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;style&gt;
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="floating-panel"&gt;
+      &lt;input id="address" type="textbox" value="Sydney, NSW"&gt;
+      &lt;input id="submit" type="button" value="Geocode"&gt;
+    &lt;/div&gt;
+    &lt;div id="map"&gt;&lt;/div&gt;
+    &lt;script&gt;
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: {lat: -34.397, lng: 150.644}
+        });
+        var geocoder = new google.maps.Geocoder();
+
+        document.getElementById('submit').addEventListener('click', function() {
+          geocodeAddress(geocoder, map);
+        });
+      }
+
+      function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === google.maps.GeocoderStatus.OK) {
+            resultsMap.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map: resultsMap,
+              position: results[0].geometry.location
+            });
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
+    &lt;/script&gt;
+    &lt;script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=<var class="apiparam replaceable-credential">YOUR_API_KEY</var>&amp;callback=initMap"&gt;
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </article>
+    </section>
+
+  
+  </div>
+
+  
+        
+<div class="devsite-content-footer nocontent">
+  
+  
+  
+    <p>Except as otherwise noted, the content of this page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>, and code samples are licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see our <a href="https://developers.google.com/site-policies">Site Policies</a>.</p>
+  
+
+  
+    
+    <p class="devsite-content-footer-date" itemprop="datePublished"
+       content="2016-04-08T07:39:04.335350">
+      
+      Last updated April 8, 2016.
+    </p>
+  
+
+</div>
+
+        </div>
+      </article>
+  
+
+        </div>
+      
+
+<footer class="devsite-footer nocontent"><nav class="devsite-full-site-width"><ul class="devsite-footer-row"><li class="devsite-footer-promo devsite-footer-flex"><a href="http://stackoverflow.com/questions/tagged/google-maps-api-3" class="devsite-footer-promo-title gc-analytics-event"
+              data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo"><img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/logo-stack-overflow.svg">
+            
+            
+              Stack Overflow 
+            
+          </a><div class="devsite-footer-promo-description">Ask a question under the google-maps-api-3 tag.</div></li><li class="devsite-footer-promo devsite-footer-flex"><a href="https://github.com/googlemaps/" class="devsite-footer-promo-title gc-analytics-event"
+              data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo"><img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/logo-github.svg">
+            
+            
+              GitHub 
+            
+          </a><div class="devsite-footer-promo-description">Fork our samples and try them yourself.</div></li><li class="devsite-footer-promo devsite-footer-flex"><a href="https://googlegeodevelopers.blogspot.com" class="devsite-footer-promo-title gc-analytics-event"
+              data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo"><img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/blogger_64dp.png">
+            
+            
+              Blog 
+            
+          </a><div class="devsite-footer-promo-description">Read the latest updates, customer stories, and tips.</div></li><li class="devsite-footer-promo devsite-footer-flex"><a href="https://code.google.com/p/gmaps-api-issues/issues/list?can=2&q=apitype:Javascript3&colspec=ID+Type+Status+Introduced+Fixed+Summary+Internal+Stars&cells=tiles" class="devsite-footer-promo-title gc-analytics-event"
+              data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo"><img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/developers_64dp.png">
+            
+            
+              Issue Tracker 
+            
+          </a><div class="devsite-footer-promo-description">Something wrong? Send us a bug report!</div></li></ul><ul class="devsite-footer-row"><li class="devsite-footer-linkbox devsite-footer-flex"><span class="devsite-footer-linkbox-icon material-icons">school</span><h3 class="devsite-footer-linkbox-heading hide-from-toc">Learn More</h3><ul><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/maps/tutorials/" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                
+                  Tutorials 
+                
+              </a></li><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/maps/pricing-and-plans/" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                
+                  Pricing and Plans 
+                
+              </a></li><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/maps/documentation/api-picker" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                
+                  API Picker 
+                
+              </a></li><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/maps/articles/" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                
+                  Articles 
+                
+              </a></li></ul></li><li class="devsite-footer-linkbox devsite-footer-flex"><span class="devsite-footer-linkbox-icon material-icons">code</span><h3 class="devsite-footer-linkbox-heading hide-from-toc">Platforms</h3><ul><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/maps/android/" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                
+                  Android 
+                
+              </a></li><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/maps/ios/" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                
+                  iOS 
+                
+              </a></li><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/maps/web/" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                
+                  Web 
+                
+              </a></li><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/maps/web-services/" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                
+                  Web Services 
+                
+              </a></li></ul></li><li class="devsite-footer-linkbox devsite-footer-flex"><span class="devsite-footer-linkbox-icon material-icons">info</span><h3 class="devsite-footer-linkbox-heading hide-from-toc">Product Info</h3><ul><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/maps/contact-sales" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                
+                  Contact sales 
+                
+              </a></li><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/maps/documentation/javascript/support" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                
+                  Community support 
+                
+              </a></li><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/maps/premium/support" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                
+                  Paid support 
+                
+              </a></li><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/maps/terms" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                
+                  Terms of Service 
+                
+              </a></li></ul></li></ul></nav></footer><footer class="devsite-site-footer nocontent"><nav class="devsite-site-footer-nav devsite-nav devsite-full-site-width"><ul class="devsite-site-footer-column-list"><li class="devsite-site-footer-column"><ul class="devsite-site-footer-list"><li class="devsite-site-footer-item"><h3>Connect</h3></li><li class="devsite-site-footer-item"><a href="https://googledevelopers.blogspot.com/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Blog Link">Blog</a></li><li class="devsite-site-footer-item"><a href="https://www.facebook.com/pages/Google-Developers/967415219957038" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Facebook Link">Facebook</a></li><li class="devsite-site-footer-item"><a href="https://plus.google.com/+GoogleDevelopers/posts" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer G+ Link">Google+</a></li><li class="devsite-site-footer-item"><a href="https://medium.com/google-developers" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Medium Link">Medium</a></li><li class="devsite-site-footer-item"><a href="https://twitter.com/googledevs" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Twitter Link">Twitter</a></li><li class="devsite-site-footer-item"><a href="https://www.youtube.com/user/GoogleDevelopers" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer YouTube Link">YouTube</a></li></ul></li><li class="devsite-site-footer-column"><ul class="devsite-site-footer-list"><li class="devsite-site-footer-item"><h3>Programs</h3></li><li class="devsite-site-footer-item"><a href="https://www.womentechmakers.com/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Women Techmakers">Women Techmakers</a></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/agency/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Agency">Agency Program</a></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/groups/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Groups">Google Developer Groups</a></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/experts/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Experts">Google Developer Experts</a></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/startups/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Startups">Startup Launchpad</a></li></ul></li><li class="devsite-site-footer-column"><ul class="devsite-site-footer-list"><li class="devsite-site-footer-item"><h3>Developer Consoles</h3></li><li class="devsite-site-footer-item"><a href="https://console.developers.google.com/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Google Developers Console">Google Developers Console</a></li><li class="devsite-site-footer-item"><a href="https://play.google.com/apps/publish/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Play Developers Console">Google Play Console</a></li><li class="devsite-site-footer-item"><a href="https://cast.google.com/publish/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Cast SDK Developer Console">Cast SDK Console</a></li><li class="devsite-site-footer-item"><a href="https://chrome.google.com/webstore/developer/dashboard" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Chrome Web Store Developer Dashboard">Chrome Web Store Dashboard</a></li></ul></li><li class="devsite-site-footer-column"><ul class="devsite-site-footer-list"><li class="devsite-site-footer-item"><h3>Explore</h3></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/android/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Android">Android</a></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/ios/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer iOS">iOS</a></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/web/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Web">Web</a></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/games/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Games">Games</a></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/products/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Products">All Products</a></li><li class="devsite-site-footer-item"><a href="https://www.google.com/about/careers/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer more careers">Careers</a></li></ul></li></ul></nav></footer><footer class="devsite-utility-footer"><nav class="devsite-utility-footer-nav devsite-nav devsite-full-site-width"><span class="devsite-utility-footer-links"><a href="https://developers.google.com/site-terms/">Terms</a>
+      &nbsp; | &nbsp;
+      
+      <a href="https://www.google.com/intl/en/privacy/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Privacy Link">Privacy</a></span><form class="devsite-utility-footer-language" id="setlang" action="/i18n/setlang/" method="post"><input type="hidden" name="xsrf_token" value="pG28XY3JPNjqPgiGtAMN9UKnVXdR4vPj8E5RFJ1TXHg6MTQ2MTExNjY3Nzg3MDY0MA" /><input type="hidden" name="next" value="/maps/documentation/javascript/examples/geocoding-simple" /><select id="footer_language" name="language"><option value="ar"
+              >
+            العربيّة
+          </option><option value="bg"
+              >
+            български
+          </option><option value="ca"
+              >
+            català
+          </option><option value="zh-cn"
+              >
+            简体中文
+          </option><option value="zh-tw"
+              >
+            繁體中文
+          </option><option value="hr"
+              >
+            Hrvatski
+          </option><option value="cs"
+              >
+            česky
+          </option><option value="da"
+              >
+            dansk
+          </option><option value="nl"
+              >
+            Nederlands
+          </option><option value="en"
+               selected="selected" >
+            English
+          </option><option value="fa"
+              >
+            فارسی
+          </option><option value="fi"
+              >
+            suomi
+          </option><option value="fr"
+              >
+            français
+          </option><option value="de"
+              >
+            Deutsch
+          </option><option value="el"
+              >
+            Ελληνικά
+          </option><option value="he"
+              >
+            עברית
+          </option><option value="hi"
+              >
+            Hindi
+          </option><option value="hu"
+              >
+            Magyar
+          </option><option value="id"
+              >
+            Bahasa Indonesia
+          </option><option value="it"
+              >
+            italiano
+          </option><option value="ja"
+              >
+            日本語
+          </option><option value="ko"
+              >
+            한국어
+          </option><option value="lv"
+              >
+            latviešu
+          </option><option value="lt"
+              >
+            Lietuviškai
+          </option><option value="nb"
+              >
+            norsk (bokmål)
+          </option><option value="nn"
+              >
+            norsk (nynorsk)
+          </option><option value="pl"
+              >
+            polski
+          </option><option value="pt-br"
+              >
+            Português Brasileiro
+          </option><option value="pt"
+              >
+            Português
+          </option><option value="ro"
+              >
+            Română
+          </option><option value="ru"
+              >
+            Русский
+          </option><option value="sr"
+              >
+            српски
+          </option><option value="sk"
+              >
+            slovenský
+          </option><option value="sl"
+              >
+            Slovenščina
+          </option><option value="es"
+              >
+            español
+          </option><option value="es-419"
+              >
+            Español (América Latina)
+          </option><option value="sv"
+              >
+            svenska
+          </option><option value="th"
+              >
+            ภาษาไทย
+          </option><option value="tr"
+              >
+            Türkçe
+          </option><option value="uk"
+              >
+            Українська
+          </option><option value="vi"
+              >
+            Tiếng Việt
+          </option></select></form></nav></footer><div class="devsite-feedback-dialog devsite-dialog"><div class="devsite-dialog-contents"><h3>Send feedback about...</h3><div class="devsite-feedback-item"><a data-type="documentation" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Docs Feedback Image"><div class="devsite-feedback-item-icon-container"><div class="devsite-feedback-item-icon-white devsite-feedback-item-icon-docs material-icons"></div></div></a><div class="devsite-feedback-item-name">
+          
+          This page
+        </div><div class="devsite-feedback-item-description"><a data-type="documentation" tabindex="0"  class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Docs Feedback Text">Documentation feedback</a></div></div><div class="devsite-feedback-item"><a data-type="product"  class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Product Feedback Image"><img src="https://www.gstatic.com/images/branding/product/1x/maps_64dp.png"
+                 class="devsite-feedback-item-icon"
+                 alt="Google Maps JavaScript API"></a><div class="devsite-feedback-item-name">
+        Google Maps JavaScript API
+        </div><div class="devsite-feedback-item-description"><a data-type="product" tabindex="0" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Product Feedback Text">Product feedback</a></div></div><div class="devsite-feedback-support"><img src="https://developers.google.com/_static/d0dac75bcc/images/feedback/ic_help_24px.svg">
+        
+        
+        Need help? Visit our <a href="https://developers.google.com/maps/documentation/javascript/support" >support page</a>.
+      </div></div><div class="devsite-dialog-buttons"><button type="button" class="devsite-feedback-cancel button-white gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Cancel Feedback Button">
+        
+        Cancel
+      </button></div></div><script>
+  $(document).ready(function() {
+    new devsite.feedback.Widget({
+        'product_id': '81777',
+        'bucket': '',
+        'context': 'Maps JS API v3',
+        'version': 'devsite-20160419-r01-rc01.default'
+      },
+      document.querySelectorAll('.devsite-feedback-button'),
+      'en',
+      document.querySelector('.devsite-site-mask'),
+      document.querySelector('.devsite-feedback-dialog'),
+      document.querySelector('.devsite-feedback-cancel'),
+      document.querySelectorAll('.devsite-feedback-item a:not([href])')
+    );
+  });
+  </script></div><script async defer src="//www.gstatic.com/feedback/api.js"></script><script src="https://developers.google.com/_static/d0dac75bcc/js/jquery_ui-bundle.js"></script><script src="https://developers.google.com/_static2/d0dac75bcc/jsi18n/"></script><script src="https://developers.google.com/_static/d0dac75bcc/js/script_foot_closure.js"></script><script src="https://developers.google.com/_static/d0dac75bcc/js/script_foot.js"></script><script>
+        (function($) {
+          devsite.devsite.Init($, 'devsite',
+              '[]', '',
+              'en', true,
+              'd0dac75bcc', 'sborn1@ocdsb.ca',
+              true, // Enable Copenhagen
+              {"098dafe57affddc137df300142652cfd": false, "aeabbb621a03102b5b95dbd63cd26e68": true, "6749dcb526ce9bde6993550c7d928d24": true, "ce556e0d44070ac33ad04f8fda535631": false, "00fe5bd02d47cd27e60084834f8b87c5": false}, '/maps/documentation/javascript/',
+              'https://developers.google.com/');
+        })(jQuery);
+
+        
+        devsite.localInit = function() {
+          
+        };
+      </script><script>
+      $('#setlang select').each(function() {
+        if (navigator.userAgent.match(/msie/i)) {
+          $(this).change(function() {
+            $('#setlang').submit();
+          });
+        } else {
+          $(this).kdSelect({'change': function() {
+            $('#setlang').submit();
+          }});
+        }
+      });
+      </script><script async defer src="//survey.g.doubleclick.net/async_survey?site=7e6fbbkvyahh4bsgtzwpq7uv3a"></script></div><script>
+    var dataLayer = [{"scriptsafe": null, "projectName": "Google Maps JavaScript API", "language": {"requested": "en", "served": "en"}, "signedIn": "True", "internalUser": "False"}];
+    </script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W546ZN"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W546ZN');</script><span id="devsite-request-elapsed" data-request-elapsed="551.480054855"></span></body></html>

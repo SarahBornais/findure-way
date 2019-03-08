@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="main.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        
+        <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+		<meta name="robots" content="noindex, nofollow" />
+
+		<link type="text/css" rel="stylesheet" href="mmenu.css" />
+		
+		<script type="text/javascript" language="javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="jquery.mmenu.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('nav#menu').mmenu();
+			});
+		</script>
+        
+    </head>
+    <body>
+    <div id="page">
+			<div id="header">
+				<a href="#menu"></a>
+				Home
+			</div>
+    <div id="content">
+    <div class="jumbotron" id="main">
+      <div class="container">
+        <h1 id="welcome">Welcome.</h1>
+        <p>Let's get started.</p>
+        <button onclick="name(Fred)">Create an account &raquo;</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="jumbotron">
+          <h2>Students</h2>
+          <a href="path.html">See my path</a>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="jumbotron">
+          <h2>Parents</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="jumbotron">
+          <h2>Teachers</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      </div>
+      <nav id="menu">
+				<ul>
+					<li><a href="page.html">The page</a></li>
+					<li><a href="mainmenu.html">The mainmenu</a></li>
+					<li><a href="submenus.html">Submenus</a></li>
+					<li><a href="labels.html">Labels</a></li>
+					<li><a href="counters.html">Counters</a></li>
+					<li><a href="selected.html">Selected item</a></li>
+					<li class="Selected"><a href="openmenu.html">Open the menu</a></li>
+					<li><a href="closemenu.html">Close the menu</a></li>
+				</ul>
+			</nav>
+      </div>
+      </div>
+    
+    <script>
+        var name = '<?php echo $_SESSION["FirstName"]; ?>'
+        document.getElementById("welcome").innerHTML = "Welcome " + name;
+    </script>
+        
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+        
+        
+    </body>
+</html>

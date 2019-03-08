@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <body>
+<?php 
+echo("hello from the other side...");
+/*
+
+session_start();
+ 
+$dbhost = "localhost";
+$dbname = "UserAccounts";
+$dbuser = "root"; 
+$dbpass = "root";
+ 
+mysql_connect($dbhost, $dbuser, $dbpass) or die("MySQL Error: " . mysql_error());
+mysql_select_db($dbname) or die("MySQL Error: " . mysql_error());
+
+    $username = mysql_real_escape_string($_POST['username']);
+    $password = md5(mysql_real_escape_string($_POST['password']));
+     
+    $checklogin = mysql_query("SELECT * FROM users WHERE Username = '".$username."' AND Password = '".$password."'");
+     
+     //If it is a valid username and password
+    if(mysql_num_rows($checklogin) == 1)
+    {
+        $row = mysql_fetch_array($checklogin);
+        $email = $row['EmailAddress'];
+         
+        $_SESSION['Username'] = $username;
+        $_SESSION['EmailAddress'] = $email;
+        $_SESSION['LoggedIn'] = 1;
+        
+        //include("home.html");
+    }
+    //If it is not a valid username and/or password
+    else
+    {
+        //header("location: home.html");
+        window.open('home.html');
+    }
+?>
+<script>
+window.location = "home.html";
+</script>
+*/
+?>
+</body>
+</html>

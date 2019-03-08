@@ -1,0 +1,89 @@
+body {
+    background-image: url(blurred-background.jpg);
+    background-size: 120%;
+    overflow: hidden;
+}
+
+#main {
+    color: #eee;
+    background-color: rgba(238, 238, 238, 0);
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+.jumbotron {
+    background-color: rgba(238, 238, 238, 0.5);
+    padding-left: 0%;
+    padding-right: 0%;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    
+}
+.form{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+#button {
+    background-color: rgb(91,183,91);
+}
+
+#signin{
+    background-color: rgba(91, 183, 91, 0.9);
+    color: rgba(50, 54, 56, 0.75);
+    border: 1px solid rgba(91, 183, 91, 0.9);
+    text-align: center;
+    size: 200px, 200px;
+    color: #eee
+}
+
+#btnsignin{
+    position: relative;
+    float: right;
+    width: 100%;
+}
+
+#helplinks{
+    font-size: 1em;
+    text-align: center;
+}
+
+#spacer{
+    color: rgba(238, 238, 238, 0);
+    font-size: 1em;
+}
+
+.my-navbar{
+    background-color: #337ab7
+}
+
+#prezi_player_weaavokajdqc{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#back-arrow{
+    color: #3E3E40;
+    font-size: 3.2em;
+    padding-left: 10px;
+    margin-top: 0px;
+    position: absolute;
+    font-family: "Courier New", Courier, monospace;
+}
+#back-arrow:hover{
+    text-decoration: none;
+}
+
+.choice{
+    width: 32%; 
+    background-color: ghostwhite; 
+    border: 1px solid #24809A; 
+    color: #24809A; 
+    height: 2.5em;
+}
+.choice:hover{
+    width: 32%; 
+    background-color: #24809A; 
+    border: 1px solid #24809A; 
+    color: ghostwhite; 
+    height: 2.5em;
+}

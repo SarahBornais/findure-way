@@ -1,0 +1,341 @@
+
+#header a {
+    background: center center no-repeat transparent;
+    background-size: 100% 100%;
+    display: block;
+    width: 100%;
+    height: 55px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    margin-top: 0px;
+    margin-left: -10px;
+    margin-right: 0px;
+    box-shadow: 0 0 20px rgba( 0, 0, 0, 0.8 );
+    float: left;
+}
+
+#search {
+    background: center center no-repeat transparent;
+    background-image: url(search-icon.png);
+    background-size: 90% 90%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20;
+    left: 10px;
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-left: 80%;
+    float: right;
+    border: 0px solid white;
+}
+
+/*data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE1JREFUeNpi/P//PwOtARMDHQBdLGFBYt+nkR2KjEhxQqvIYaR7cD2glSWMo0mY3DiJo5Edi4ZPEqZ7nMSP5pPRon60qB9NwpQDgAADAMIxHUJvWs/TAAAAAElFTkSuQmCC*/
+
+#header a.friends {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAVNJREFUeNq01jFLAzEYxvH2UBCxiIiDUhzcdXCyIk5ufgUXLR37JdxcXBxcuwmOOtml0EKpo04iWIpIQREVEVFLjf9AhoC9e3O5uxd+lMLdPU1yedO8UiqXdQWO122ghi4+8IwGqiiId+uRCHbxqsLrFHNRz5ACSnhTch1EPScQpnIH0w7TWcGiz5rouS45rtkMVnxCJrAQ4yUq+oT8YhAjZOAT8oWHGCE9nxC9H64cA15w4xOiW0HbfErVNhvUa8c3cecQcoZv3xA9z+fCNbe4SNq7jvEUMaUnuE/au7SjkHbSR1G637ULh73Kn+gn7cIBttELGckQh9Jo8iMOrSksYx2b2MKk8FuvUUcHl/9GbiWuooYu3pVf/eARLZQxbp8na2YR0659e+HLmM/geN+z98lSRv8hZu2QQkYh+kzKjZkvHdPahymH6DNp5Cucev0JMAAkKj0NEoYBJwAAAABJRU5ErkJggg==);
+}
+
+#header a.right {
+    left: auto;
+    right: 10px;
+}
+
+#dark-text{
+    color: #3F3F3F;
+}
+
+.search-bar{
+    background-color: white;
+    position: absolute;
+    margin-top: 15px;
+    color: #3F3F3F;
+    float: right; 
+    border: 0px solid white;
+    font-size: 1em;
+    border-bottom: 2px solid #3F3F3F;
+    width: 50%;
+    border-radius: 0px;
+    margin-right: 300px;
+}
+.search-bar:focus {
+    outline: none;
+}
+
+/*program info styles*/
+
+#number1 {
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    position: relative;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+    padding: 0px;
+    border-right: 5px solid white;
+}
+#number2 {
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    position: relative;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+    padding: 0px;
+}
+#number3 {
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    position: relative;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+    padding: 0px;
+    border-right: 5px solid white;
+}
+#number4 {
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    position: relative;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+    padding: 0px;
+}
+#number5 {
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    position: relative;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+    padding: 0px;
+    border-right: 5px solid white;
+}
+#number6 {
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    position: relative;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+    padding: 0px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+.card div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 150px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 140px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+#number1 .card .front {
+  width: 100%; 
+  height: 150px; 
+  background-color: #36A0AE; 
+  float: right; 
+  text-shadow: 0 1px 2px rgba( 0, 0, 0, 0.5 ); 
+  color: white; 
+  line-height: 150px; 
+  text-align: center; 
+  border: 0px solid white;
+  font-size: 1em;
+}
+#number1 .card .back {
+    width: 100%; 
+  height: 150px; 
+  background-color: #36A0AE; 
+  float: right; 
+  text-shadow: 0 1px 2px rgba( 0, 0, 0, 0.5 ); 
+  color: white; 
+  line-height: 150px; 
+  text-align: center; 
+  border: 0px solid white;
+  font-size: 1em;
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+#number2 .card .front {
+  width: 100%; 
+  height: 150px; 
+  background-color: #C44642; 
+  float: right; 
+  text-shadow: 0 1px 2px rgba( 0, 0, 0, 0.5 ); 
+  color: white; 
+  line-height: 150px; 
+  text-align: center; 
+  border: 0px solid white;
+  font-size: 1em;
+}
+#number2 .card .back {
+    width: 100%; 
+  height: 150px; 
+  background-color: #C44642; 
+  float: right; 
+  text-shadow: 0 1px 2px rgba( 0, 0, 0, 0.5 ); 
+  color: white; 
+  line-height: 150px; 
+  text-align: center; 
+  border: 0px solid white;
+  font-size: 1em;
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+#number3 .card .front {
+  width: 100%; 
+  height: 150px; 
+  background-color: #806084; 
+  float: right; 
+  text-shadow: 0 1px 2px rgba( 0, 0, 0, 0.5 ); 
+  color: white; 
+  line-height: 150px; 
+  text-align: center; 
+  border: 0px solid white;
+  font-size: 1em;
+}
+#number3 .card .back {
+    width: 100%; 
+  height: 150px; 
+  background-color: #806084; 
+  float: right; 
+  text-shadow: 0 1px 2px rgba( 0, 0, 0, 0.5 ); 
+  color: white; 
+  line-height: 150px; 
+  text-align: center; 
+  border: 0px solid white;
+  font-size: 1em;
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+#number4 .card .front {
+  width: 100%; 
+  height: 150px; 
+  background-color: #86B503; 
+  float: right; 
+  text-shadow: 0 1px 2px rgba( 0, 0, 0, 0.5 ); 
+  color: white; 
+  line-height: 150px; 
+  text-align: center; 
+  border: 0px solid white;
+  font-size: 1em;
+}
+#number4 .card .back {
+    width: 100%; 
+  height: 150px; 
+  background-color: #86B503; 
+  float: right; 
+  text-shadow: 0 1px 2px rgba( 0, 0, 0, 0.5 ); 
+  color: white; 
+  line-height: 150px; 
+  text-align: center; 
+  border: 0px solid white;
+  font-size: 1em;
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+#number5 .card .front {
+  width: 100%; 
+  height: 150px; 
+  background-color: #A3D2D0; 
+  float: right; 
+  text-shadow: 0 1px 2px rgba( 0, 0, 0, 0.5 ); 
+  color: white; 
+  line-height: 150px; 
+  text-align: center; 
+  border: 0px solid white;
+  font-size: 1em;
+}
+#number5 .card .back {
+    width: 100%; 
+  height: 150px; 
+  background-color: #A3D2D0; 
+  float: right; 
+  text-shadow: 0 1px 2px rgba( 0, 0, 0, 0.5 ); 
+  color: white; 
+  line-height: 150px; 
+  text-align: center; 
+  border: 0px solid white;
+  font-size: 1em;
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+#number6 .card .front {
+  width: 100%; 
+  height: 150px; 
+  background-color: #C9B732; 
+  float: right; 
+  text-shadow: 0 1px 2px rgba( 0, 0, 0, 0.5 ); 
+  color: white; 
+  line-height: 150px; 
+  text-align: center; 
+  border: 0px solid white;
+  font-size: 1em;
+}
+#number6 .card .back {
+    width: 100%; 
+  height: 150px; 
+  background-color: #C9B732; 
+  float: right; 
+  text-shadow: 0 1px 2px rgba( 0, 0, 0, 0.5 ); 
+  color: white; 
+  line-height: 150px; 
+  text-align: center; 
+  border: 0px solid white;
+  font-size: 1em;
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.card.flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
